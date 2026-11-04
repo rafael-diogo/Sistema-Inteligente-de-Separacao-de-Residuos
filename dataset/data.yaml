@@ -1,0 +1,13 @@
+train: C:/TCC/dataset/train/images
+val: C:/TCC/dataset/valid/images
+test: C:/TCC/dataset/test/images
+
+nc: 4
+names: ['Metal', 'papel', 'paper', 'plastic']
+
+roboflow:
+  workspace: rafael-diogo-souza-costa
+  project: rafael-diogo-souza-costa
+  version: dataset
+  license: Private
+  url: https://app.roboflow.com/rafael-diogo-souza-costa/rafael-diogo-souza-costa/dataset

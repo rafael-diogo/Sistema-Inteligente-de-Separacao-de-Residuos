@@ -1,0 +1,6 @@
+# novaia > 2026-10-16 8:08pm
+https://universe.roboflow.com/rafael-diogo-souza-costa/novaia
+
+Provided by a Roboflow user
+License: CC BY 4.0
+
