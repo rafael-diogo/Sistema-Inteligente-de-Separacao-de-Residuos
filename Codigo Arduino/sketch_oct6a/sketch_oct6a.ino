@@ -32,10 +32,10 @@ const int PINO_SERVO4 = 9;
 // POSICOES INICIAIS
 // ===============================
 
-int posicaoInicialServo1 = 20; // direita
-int posicaoInicialServo2 = 33; // cima
-int posicaoInicialServo3 = 28; // esquerda
-int posicaoInicialServo4 = 30; // baixo
+int posicaoInicialServo1 = 21; // direita
+int posicaoInicialServo2 = 24; // cima arduino
+int posicaoInicialServo3 = 31; // esquerda
+int posicaoInicialServo4 = 23; // baixo HC
 
 // ===============================
 // TEMPO DE MOVIMENTO
@@ -72,7 +72,7 @@ void movimento2() {
 
   Serial.println("Movimento 2 - PLASTICO");
 
-  servo2.write(180);
+  servo2.write(150);
   servo4.write(0);
 
   delay(TEMPO_MOVIMENTO);

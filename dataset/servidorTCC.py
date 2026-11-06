@@ -13,7 +13,7 @@ os.makedirs(PASTA_FOTOS, exist_ok=True)
 
 # Caminho do modelo YOLO treinado
 CAMINHO_MODELO = (
-    r"C:\TCC\iaNova\runs\treinamento_yolo26\weights\last.pt"
+    r"C:\TCC\runs\detect\runs\TCC\YOLO26n_TCC-2\weights/best.pt"
 )
 
 # Carrega o modelo uma única vez, ao iniciar o servidor
@@ -79,6 +79,7 @@ def upload():
 
 
 
+
 @app.route("/imagem", methods=["GET"])
 def imagem():
     caminho = os.path.join(PASTA_FOTOS, "Lixo_detectar.jpg")
@@ -115,6 +116,12 @@ def imagem():
 
         # Nenhuma detecção encontrada
         if melhor_classe is None:
+            print("Resultado: 4 - Não reciclável / Não identificado")
+            return "4", 200
+
+        # Verifica se a confiança é menor que 40%
+        if maior_confianca < 0.10:
+            print("Confiança abaixo de 10%")
             print("Resultado: 4 - Não reciclável / Não identificado")
             return "4", 200
 
